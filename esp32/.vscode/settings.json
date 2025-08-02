@@ -1,0 +1,25 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPath": "/home/iker_ubide/esp/v5.0/esp-idf",
+  "idf.pythonInstallPath": "/home/iker_ubide/.esp_env/bin/python",
+  "idf.openOcdConfigs": [
+    "board/esp32s3-builtin.cfg"
+  ],
+  "idf.port": "/dev/ttyACM0",
+  "idf.toolsPath": "/home/iker_ubide/.espressif",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "files.associations": {
+    "esp_bt.h": "c",
+    "nvs_flash.h": "c",
+    "esp_gap_ble_api.h": "c",
+    "esp_nimble_hci.h": "c",
+    "esp_system.h": "c",
+    "freertos.h": "c",
+    "ble_svc_gap.h": "c",
+    "esp_mac.h": "c",
+    "nimble_port.h": "c"
+  },
+  "idf.flashType": "UART"
+}
