@@ -19,7 +19,8 @@
     "freertos.h": "c",
     "ble_svc_gap.h": "c",
     "esp_mac.h": "c",
-    "nimble_port.h": "c"
+    "nimble_port.h": "c",
+    "common.h": "c"
   },
   "idf.flashType": "UART"
 }

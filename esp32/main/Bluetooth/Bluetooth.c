@@ -8,7 +8,8 @@ void ble_app_advertise(void);
 // Read data from ESP32 defined as server
 static int device_read(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-    os_mbuf_append(ctxt->om, "Data from the server", strlen("Data from the server"));
+    uint32_t data[2] = {key_msg, volume_msg};
+    os_mbuf_append(ctxt->om, data, sizeof(data));
     return 0;
 }
 
@@ -16,30 +17,6 @@ static int device_read(uint16_t con_handle, uint16_t attr_handle, struct ble_gat
 static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     printf("Data from the client: %.*s\n", ctxt->om->om_len, ctxt->om->om_data);
-
-    // char * data = (char *)ctxt->om->om_data;
-    // printf("%d\n",strcmp(data, (char *)"LIGHT ON")==0);
-    // if (strcmp(data, (char *)"LIGHT ON\0")==0)
-    // {
-    //    printf("LIGHT ON\n");
-    // }
-    // else if (strcmp(data, (char *)"LIGHT OFF\0")==0)
-    // {
-    //     printf("LIGHT OFF\n");
-    // }
-    // else if (strcmp(data, (char *)"FAN ON\0")==0)
-    // {
-    //     printf("FAN ON\n");
-    // }
-    // else if (strcmp(data, (char *)"FAN OFF\0")==0)
-    // {
-    //     printf("FAN OFF\n");
-    // }
-    // else{
-    //     printf("Data from the client: %.*s\n", ctxt->om->om_len, ctxt->om->om_data);
-    // }
-    
-    
     return 0;
 }
 

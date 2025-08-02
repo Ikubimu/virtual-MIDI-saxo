@@ -9,6 +9,9 @@
 #include "services/gap/ble_svc_gap.h"
 #include "services/gatt/ble_svc_gatt.h"
 
+
+extern uint32_t key_msg;
+extern uint32_t volume_msg;
 esp_err_t ble_start();
 
 
