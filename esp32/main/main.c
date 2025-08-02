@@ -16,7 +16,6 @@ void app_main()
 
     for(;;)
     {
-        vTaskDelay(pdMS_TO_TICKS(10));
         key_msg = update_keyboard();
     }
 }
